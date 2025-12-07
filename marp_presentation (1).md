@@ -1,304 +1,81 @@
 ---
 marp: true
-theme: custom
+theme: default
 paginate: true
-header: 'Product Documentation'
-footer: '24f2001048@ds.study.iitm.ac.in'
+backgroundColor: #f0f4f8
 style: |
   section {
-    background-color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   h1 {
     color: #2c3e50;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
   }
-  h2 {
-    color: #3498db;
-  }
-  code {
-    background-color: #f4f4f4;
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-  pre {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+  .custom-box {
+    background-color: #e1f5fe;
+    border-left: 5px solid #039be5;
     padding: 20px;
-    border-radius: 5px;
-  }
-  .equation {
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-left: 4px solid #3498db;
-    margin: 20px 0;
-  }
-  blockquote {
-    border-left: 4px solid #3498db;
-    padding-left: 20px;
-    color: #555;
-    font-style: italic;
+    border-radius: 4px;
   }
 ---
 
-# Software Documentation System
-## Version Control & Format Conversion
+# API Documentation v2.0
+## Technical Implementation Guide
 
-**Technical Documentation Team**
-Contact: 24f2001048@ds.study.iitm.ac.in
+**Technical Writer Team**
+Contact: [24f2001048@ds.study.iitm.ac.in](mailto:24f2001048@ds.study.iitm.ac.in)
 
 ---
 
 ## Overview
 
-This presentation demonstrates:
+This release introduces significant optimizations to our core data processing engine.
 
-- ✅ Custom theme specifications
-- ✅ Page numbering and headers/footers
-- ✅ Background images
-- ✅ Mathematical equations
-- ✅ Marp directives for styling
-- ✅ Version control friendly format
+### Key Objectives
+1. **Scalability:** Handle 10x concurrent requests.
+2. **Maintainability:** Modular code structure.
+3. **Performance:** Reduced latency by 40%.
 
 ---
 
-<!-- _class: lead -->
-<!-- _backgroundColor: #3498db -->
-<!-- _color: white -->
+# System Architecture
 
-# Why Marp?
-
-Markdown-based presentations that are:
-- **Version controllable**
-- **Easy to maintain**
-- **Convertible to PDF, HTML, PPTX**
+(Background image demonstrating global infrastructure scale)
 
 ---
 
-## Algorithm Complexity Analysis
+## Algorithmic Complexity
 
-Understanding the performance characteristics of our search algorithm:
-
-<div class="equation">
+We have optimized the sorting algorithm for the search index. The previous implementation was quadratic, but the new merge-sort implementation guarantees better performance.
 
 **Time Complexity:**
-$$O(n \log n)$$
-
-**Space Complexity:**
-$$O(n)$$
-
-</div>
-
-Where $n$ represents the number of documents in the system.
-
----
-
-## Big O Notation Examples
-
-Common algorithmic complexities in our codebase:
-
-| Algorithm | Complexity | Use Case |
-|-----------|------------|----------|
-| Binary Search | $O(\log n)$ | Document lookup |
-| Quick Sort | $O(n \log n)$ | Result ranking |
-| Hash Table | $O(1)$ | Cache access |
-
----
-
-<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80') -->
-<!-- _color: white -->
-<!-- _header: '' -->
-<!-- _footer: '' -->
-
-<style scoped>
-section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-}
-h1 {
-  color: white;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
-  font-size: 72px;
-  border: none;
-}
-h2 {
-  color: white;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-  font-size: 48px;
-}
-</style>
-
-# Data Processing Pipeline
-
-## Real-time Documentation Updates
-
----
-
-## Mathematical Foundations
-
-The documentation search relevance score is calculated using:
 
 $$
-\text{Relevance}(d, q) = \sum_{t \in q} \text{TF}(t, d) \times \text{IDF}(t)
+T(n) = 2T\left(\frac{n}{2}\right) + O(n) \implies O(n \log n)
 $$
 
 Where:
-- $\text{TF}(t, d)$ = Term frequency of term $t$ in document $d$
-- $\text{IDF}(t)$ = Inverse document frequency of term $t$
+* $n$ is the number of records
+* $T(n)$ is the total time taken
 
 ---
 
-## Code Example
+## Implementation Details
 
-```python
-def search_documents(query, documents):
-    """
-    Search documents using TF-IDF ranking
-    Complexity: O(n * m) where n=docs, m=terms
-    """
-    results = []
-    for doc in documents:
-        score = calculate_relevance(query, doc)
-        results.append((doc, score))
-    
-    return sorted(results, key=lambda x: x[1], 
-                  reverse=True)
-```
+We utilize a custom directive for critical alerts in the documentation.
+
+<div class="custom-box">
+  <strong>Note:</strong> ensure that the API key is passed in the header, not the query parameters.
+</div>
+
+* **Secure:** OAuth 2.0 Standard
+* **Fast:** Edge caching enabled
+* **Reliable:** 99.9% SLA
 
 ---
 
-<!-- _backgroundImage: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80') -->
-<!-- _color: white -->
-<!-- _header: '' -->
-<!-- _footer: '' -->
+## Contact & Support
 
-<style scoped>
-section {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px;
-}
-h2 {
-  color: white;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.95);
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 10px;
-  font-size: 56px;
-}
-blockquote {
-  color: white;
-  border-left: 6px solid #3498db;
-  background: rgba(0,0,0,0.7);
-  padding: 30px;
-  font-size: 28px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-}
-ul {
-  color: white;
-  font-size: 32px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-  background: rgba(0,0,0,0.6);
-  padding: 40px;
-  border-radius: 10px;
-  line-height: 1.8;
-}
-</style>
+For detailed technical specs or to contribute to this documentation, please reach out.
 
-## Performance Metrics
-
-> Our documentation system processes **1M+ queries per day** with an average response time of **50ms**
-
-Key performance indicators:
-- **Indexing Speed**: $O(n \log n)$
-- **Query Time**: $O(\log n)$
-- **Update Latency**: < 100ms
-
----
-
-## Custom Styling with Directives
-
-<!-- _class: lead -->
-<!-- _backgroundColor: #2c3e50 -->
-<!-- _color: #ecf0f1 -->
-
-### Marp Directives Used:
-- `<!-- _class: lead -->` - Centered content
-- `<!-- _backgroundColor: color -->` - Custom backgrounds
-- `<!-- _color: color -->` - Text color override
-- `<style scoped>` - Slide-specific CSS
-
----
-
-## Deployment Architecture
-
-```mermaid
-graph LR
-    A[Markdown Source] --> B[Marp CLI]
-    B --> C[PDF]
-    B --> D[HTML]
-    B --> E[PPTX]
-    C --> F[Distribution]
-    D --> F
-    E --> F
-```
-
-All formats generated from a single source!
-
----
-
-## Matrix Operations
-
-Documentation indexing uses sparse matrix multiplication:
-
-$$
-\mathbf{R} = \mathbf{D} \times \mathbf{Q}^T
-$$
-
-Where $\mathbf{D}$ is the document-term matrix and $\mathbf{Q}$ is the query vector.
-
-**Complexity**: $O(k \cdot n)$ for $k$ non-zero entries
-
----
-
-## Version Control Benefits
-
-Benefits of using Markdown for presentations:
-
-1. **Diff-friendly** - Track changes line by line
-2. **Merge-capable** - Collaborate without conflicts  
-3. **Reviewable** - Use pull requests for peer review
-4. **Portable** - Plain text, works everywhere
-
----
-
-<!-- _class: lead -->
-<!-- _backgroundColor: #27ae60 -->
-<!-- _color: white -->
-
-# Thank You!
-
-## Questions?
-
-**Contact**: 24f2001048@ds.study.iitm.ac.in
-
----
-
-## Additional Resources
-
-For more information:
-
-- **Marp Documentation**: https://marp.app/
-- **GitHub Repository**: Store your `.md` files
-- **CI/CD Integration**: Automated PDF generation
-- **Theme Customization**: Full CSS support
-
-**Email**: 24f2001048@ds.study.iitm.ac.in
+**Email:** 24f2001048@ds.study.iitm.ac.in
+**Docs:** docs.internal.platform
