@@ -2,80 +2,78 @@
 marp: true
 theme: default
 paginate: true
-backgroundColor: #f0f4f8
+backgroundColor: #ffffff
 style: |
   section {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+  }
+  .highlight-box {
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    padding: 20px;
+    border-radius: 8px;
   }
   h1 {
-    color: #2c3e50;
-  }
-  .custom-box {
-    background-color: #e1f5fe;
-    border-left: 5px solid #039be5;
-    padding: 20px;
-    border-radius: 4px;
+    color: #0d47a1;
   }
 ---
 
-# API Documentation v2.0
-## Technical Implementation Guide
+# Product Documentation v3.0
+## Implementation Guide
 
-**Technical Writer Team**
-Contact: [24f2001048@ds.study.iitm.ac.in](mailto:24f2001048@ds.study.iitm.ac.in)
+**Author:** Technical Writer
+**Email:** [24f2001048@ds.study.iitm.ac.in](mailto:24f2001048@ds.study.iitm.ac.in)
 
 ---
 
-## Overview
+## Introduction
 
-This release introduces significant optimizations to our core data processing engine.
+This presentation outlines the new documentation standards for our software products.
 
-### Key Objectives
-1. **Scalability:** Handle 10x concurrent requests.
-2. **Maintainability:** Modular code structure.
-3. **Performance:** Reduced latency by 40%.
+* **Version Control:** Git-based workflow
+* **Format:** Markdown first
+* **Deployment:** Automated via CI/CD
 
 ---
 
 # System Architecture
 
-(Background image demonstrating global infrastructure scale)
+(This slide features a full background image representing our tech stack)
 
 ---
 
 ## Algorithmic Complexity
 
-We have optimized the sorting algorithm for the search index. The previous implementation was quadratic, but the new merge-sort implementation guarantees better performance.
+We must ensure our documentation explains the performance implications of the new sorting module.
 
-**Time Complexity:**
+The complexity is defined as:
 
 $$
-T(n) = 2T\left(\frac{n}{2}\right) + O(n) \implies O(n \log n)
+O(n \log n) \quad \text{vs} \quad O(n^2)
 $$
 
 Where:
-* $n$ is the number of records
-* $T(n)$ is the total time taken
+* $n$ is the dataset size
+* $O$ represents the asymptotic upper bound
 
 ---
 
-## Implementation Details
+## Custom Styling Example
 
-We utilize a custom directive for critical alerts in the documentation.
+Using Marp directives for custom CSS boxes:
 
-<div class="custom-box">
-  <strong>Note:</strong> ensure that the API key is passed in the header, not the query parameters.
+<div class="highlight-box">
+  <strong>Pro Tip:</strong> Ensure your API keys are rotated every 90 days to maintain security compliance.
 </div>
 
-* **Secure:** OAuth 2.0 Standard
-* **Fast:** Edge caching enabled
-* **Reliable:** 99.9% SLA
+* Check headers
+* Verify payloads
+* Monitor logs
 
 ---
 
-## Contact & Support
+## Contact Information
 
-For detailed technical specs or to contribute to this documentation, please reach out.
+For updates to this deck, please contact:
 
-**Email:** 24f2001048@ds.study.iitm.ac.in
-**Docs:** docs.internal.platform
+**24f2001048@ds.study.iitm.ac.in**
